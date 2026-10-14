@@ -186,6 +186,15 @@ export const serviceGroups: ServiceGroup[] = [
         icon: "user-check",
         slug: "personal-branding",
       },
+      {
+        id: "website-creation",
+        title: "Website Creation",
+        description:
+          "Modern, responsive websites designed to build your brand, engage your audience, and turn visitors into customers.",
+        category: "digital",
+        icon: "monitor",
+        slug: "website-creation",
+      },
     ],
   },
   {

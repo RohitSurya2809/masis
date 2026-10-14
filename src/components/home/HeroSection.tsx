@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, ChevronRight } from "lucide-react";
+import { HeroRotatingVisual } from "./HeroRotatingVisual";
 
 export function HeroSection() {
   return (
@@ -125,66 +126,15 @@ export function HeroSection() {
             </motion.div>
           </div>
 
-          {/* Right Column: Hero Visual that never overlaps text */}
-          <div className="hidden lg:flex lg:col-span-5 xl:col-span-5 justify-center items-center">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="relative w-full max-w-[380px] aspect-square rounded-3xl bg-gradient-to-br from-blue-950/40 via-[#0e1628] to-[#07090f] border border-blue-500/20 p-8 flex flex-col justify-between shadow-2xl shadow-blue-950/50"
-            >
-              {/* Subtle ambient glow in card */}
-              <div className="absolute top-0 right-0 w-48 h-48 bg-blue-500/10 rounded-full blur-[60px] pointer-events-none" />
-
-              {/* Top tag */}
-              <div className="relative z-10 flex items-center justify-between">
-                <span className="text-[11px] font-semibold uppercase tracking-wider text-blue-400 bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">
-                  Full-Funnel Growth
-                </span>
-                <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
-              </div>
-
-              {/* Central Graphic */}
-              <div className="relative z-10 py-6 my-auto text-center">
-                <div className="w-20 h-20 mx-auto rounded-2xl bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center shadow-lg shadow-blue-500/25 mb-4 border border-blue-400/20">
-                  <svg
-                    width="40"
-                    height="40"
-                    viewBox="0 0 18 18"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M2 14V4L7 10L9 7L11 10L16 4V14"
-                      stroke="white"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </div>
-                <h3 className="text-white text-lg font-bold tracking-tight">
-                  MASIS Agency
-                </h3>
-                <p className="text-slate-400 text-xs mt-1">
-                  Creative • Performance • Technology
-                </p>
-              </div>
-
-              {/* Bottom metrics mini-bar */}
-              <div className="relative z-10 grid grid-cols-2 gap-3 pt-4 border-t border-blue-500/15">
-                <div className="bg-white/[0.02] border border-blue-500/10 rounded-xl p-2.5 text-center">
-                  <div className="text-xs font-bold text-white">360°</div>
-                  <div className="text-[10px] text-slate-500">Multi-Channel</div>
-                </div>
-                <div className="bg-white/[0.02] border border-blue-500/10 rounded-xl p-2.5 text-center">
-                  <div className="text-xs font-bold text-amber-400">ROI-First</div>
-                  <div className="text-[10px] text-slate-500">Targeted Reach</div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
+          {/* Right Column: Rotating Hero Visual */}
+          <motion.div
+            className="hidden lg:flex lg:col-span-5 xl:col-span-5 justify-center items-center"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          >
+            <HeroRotatingVisual />
+          </motion.div>
         </div>
       </div>
 

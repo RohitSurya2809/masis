@@ -19,9 +19,9 @@ export const siteConfig = {
   // NOTE: These statistics must be verified with the client before publishing.
   // Displayed only when confirmed accurate.
   stats: [
-    { label: "Brands Served", value: "500+", icon: "users" },
-    { label: "Countries Reached", value: "50+", icon: "globe" },
-    { label: "Campaigns Launched", value: "1000+", icon: "megaphone" },
+    { label: "Brands Served", value: "250", icon: "users" },
+    { label: "Countries Reached", value: "7", icon: "globe" },
+    { label: "Campaigns Launched", value: "450", icon: "megaphone" },
     { label: "Client Satisfaction", value: "99%", icon: "star" },
   ],
 } as const;

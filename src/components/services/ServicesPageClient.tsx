@@ -41,6 +41,7 @@ import {
   MapPin,
   PieChart,
   Video,
+  Monitor,
   Star,
 } from "lucide-react";
 
@@ -70,6 +71,7 @@ const serviceIconMap: Record<string, React.ComponentType<{ size?: number; classN
   "map-pin": MapPin,
   "pie-chart": PieChart,
   video: Video,
+  monitor: Monitor,
 };
 
 function ServiceIcon({ name }: { name: string }) {
